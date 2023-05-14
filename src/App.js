@@ -1,16 +1,30 @@
-import { useEffect } from "react";
-import * as apis from "./apis";
+import Header from "./Layouts/Header";
+import SideBar from "./Layouts/SideBar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { publicRoutes } from "./routes";
 
 function App() {
-  useEffect(() => {
-    const fetchDataAlbum = async () => {
-      const res = await apis.getAlbum();
-      console.log(res);
-    };
-    fetchDataAlbum();
-  }, []);
-
-  return <div className="App">Hello</div>;
+  return (
+    <Router>
+      <div className="App">
+        <div>
+          <SideBar />
+        </div>
+        <div>
+          <Header />
+          <Routes>
+            {publicRoutes.map((publicRoute, index) => (
+              <Route
+                path={publicRoute.path}
+                element={publicRoute.compenent}
+                key={`route${index}`}
+              ></Route>
+            ))}
+          </Routes>
+        </div>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
