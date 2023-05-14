@@ -2,6 +2,7 @@ import Header from "./Layouts/Header";
 import SideBar from "./Layouts/SideBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./routes";
+import "./App.scss";
 
 function App() {
   return (
