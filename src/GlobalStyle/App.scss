@@ -1,0 +1,130 @@
+@import "./variable.scss";
+
+//import font
+@font-face {
+  font-family: CircularSp;
+  src: url("../assets/fonts/CircularSp-Bold.woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: CircularSp;
+  src: url("../assets/fonts/CircularSp-Book.woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: CircularSpTitle;
+  src: url("../assets/fonts/CircularSpTitle-Bold.woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: CircularSpTitle;
+  src: url("../assets/fonts/CircularSpTitle-Black.woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Spoticon;
+  src: url("../assets/fonts//spoticon_regular_2.woff2");
+  font-weight: 500;
+}
+
+// Css chung
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: CircularSp, Arial, Helvetica, sans-serif;
+  color: $primary-color;
+}
+
+body {
+  overscroll-behavior-y: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+.App {
+  display: flex;
+  position: relative;
+}
+
+.wrapper-sidebar {
+  width: 232px;
+  background-color: $bg-sidebar;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+.wrapper-main {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: $bg-main;
+  margin-left: 232px;
+  overflow: hidden;
+}
+
+.wrapper-header {
+  width: 100%;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  background-color: $bg-header;
+}
+
+.wrapper-content {
+  min-height: 1000px;
+  margin-top: 64px;
+}
+
+#tippy-1 {
+  transform: translate3d(130px, 167.5px, 0px) !important;
+}
+
+.tippy-content {
+  padding: 0 !important;
+}
+
+.tippy-arrow {
+  color: #0d72ea !important;
+}

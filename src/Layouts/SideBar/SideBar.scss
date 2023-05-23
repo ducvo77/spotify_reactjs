@@ -1,0 +1,46 @@
+@import "../../GlobalStyle/variable.scss";
+
+.container-sidebar {
+  padding-top: 24px;
+}
+
+.logo {
+  display: block;
+  padding: 0 24px;
+  margin-bottom: 18px;
+  svg {
+    width: 131px;
+    height: 40px;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  .sidebar-item {
+    padding: 0 24px;
+    display: flex;
+    gap: 16px;
+    height: 40px;
+    align-items: center;
+    color: $second-color;
+    cursor: pointer;
+    .icon {
+      font-size: 24px;
+    }
+    span {
+      font-weight: 500;
+      font-size: 14px;
+    }
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .sidebar-item.active {
+    color: $primary-color;
+  }
+}
+
+.sidebar-bottom {
+  margin-top: 24px;
+}
