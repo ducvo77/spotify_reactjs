@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
+import "./Button.scss";
 
 function Button({ className, to, children, requiresLogin }) {
   let Tag;
   if (to && !requiresLogin) {
     Tag = Link;
   } else {
-    Tag = "div";
+    Tag = "button";
   }
 
-  const prop = { className, to };
+  const prop = { to };
+  const classNames = { className };
 
   return (
-    <Tag className={className} {...prop}>
+    <Tag {...classNames} {...prop}>
       {children}
     </Tag>
   );
