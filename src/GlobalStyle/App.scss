@@ -121,6 +121,7 @@ input {
   top: 0;
   background-color: $bg-header;
   width: calc(100% - 232px);
+  z-index: 9999;
 }
 
 .wrapper-content {

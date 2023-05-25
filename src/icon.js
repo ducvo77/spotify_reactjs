@@ -7,6 +7,7 @@ import {
   BsPlusSquareFill,
   BsBookmarkHeart,
   BsBookmarkHeartFill,
+  BsPlayFill,
 } from "react-icons/bs";
 import { MdClear } from "react-icons/md";
 export {
@@ -23,4 +24,5 @@ export {
   IoIosArrowBack,
   IoIosArrowForward,
   MdClear,
+  BsPlayFill,
 };

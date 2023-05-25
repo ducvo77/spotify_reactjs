@@ -1,13 +1,17 @@
 import axios from "axios";
+import refreshToken from "./token";
 
+refreshToken();
 const axiosInstance = axios.create({
   baseURL: process.env.REACT_APP_BASEURL,
   timeout: 3000,
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
-    Authorization: `Bearer ${localStorage.getItem("spotifyAccessToken")}`,
+    // Authorization: `Bearer ${localStorage.getItem("spotifyAccessToken")}`,
   },
 });
+
+// console.log(localStorage.getItem("spotifyAccessToken"));
 
 // Add a request interceptor
 axiosInstance.interceptors.request.use(

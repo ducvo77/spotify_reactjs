@@ -46,10 +46,11 @@ const refreshToken = async () => {
   localStorage.setItem("spotifyAccessToken", accessToken);
 
   // Lập lịch gọi lại refreshToken sau 1 giờ
-  setTimeout(refreshToken, 60 * 60 * 1000);
+  setTimeout(refreshToken, 3600 * 1000);
+  // console.log(1);
 };
 
 // Khởi động lấy access token lần đầu
-refreshToken();
+// refreshToken();
 
-export default getAccessToken;
+export default refreshToken;
